@@ -69,8 +69,4 @@
         revertCardDate VARCHAR(50)
         );
     </select>
-
-
-
-
 </mapper>

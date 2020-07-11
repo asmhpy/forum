@@ -18,10 +18,10 @@ public interface UserMapper {
      * @param username
      * @return
      */
-    @Select(value = "select u.adminName,u.adminPassword from tb_admin u where u.adminName=#{adminName}")
+    @Select(value = "select u.adminName,u.adminPassworld from tb_admin u where u.adminName=#{adminName}")
     @Results
             ({@Result(property = "adminName",column = "adminName"),
-                    @Result(property = "adminPassword",column = "adminPassword")})
+                    @Result(property = "adminPassworld",column = "adminPassworld")})
     User findUserByName(@Param("adminName") String username);
 
     /**
@@ -29,7 +29,7 @@ public interface UserMapper {
      * @param user
      * @return
      */
-    @Insert("insert into tb_admin values(#{adminId},#{adminName},#{adminPassword})")
+    @Insert("insert into tb_admin values(#{adminId},#{adminName},#{adminPassworld})")
     //加入该注解可以保存对象后，查看对象插入id
     @Options(useGeneratedKeys = true,keyProperty = "adminId",keyColumn = "adminId")
     void regist(User user);
@@ -39,6 +39,6 @@ public interface UserMapper {
      * @param user
      * @return
      */
-    @Select("select u.adminId from tb_admin u where u.adminName = #{adminName} and adminPassword = #{adminPassword}")
+    @Select("select u.adminId from tb_admin u where u.adminName = #{adminName} and adminPassworld = #{adminPassworld}")
     Long login(User user);
 }

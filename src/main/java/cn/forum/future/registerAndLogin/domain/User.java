@@ -7,7 +7,7 @@ package cn.forum.future.registerAndLogin.domain;
 public class User {
     private Long adminId;
     private String adminName;
-    private String adminPassword;
+    private String adminPassworld;
 
     public Long getAdminId() {
         return adminId;
@@ -25,12 +25,12 @@ public class User {
         this.adminName = adminName;
     }
 
-    public String getAdminPassword() {
-        return adminPassword;
+    public String getAdminPassworld() {
+        return adminPassworld;
     }
 
-    public void setAdminPassword(String adminPassword) {
-        this.adminPassword = adminPassword;
+    public void setAdminPassworld(String adminPassworld) {
+        this.adminPassworld = adminPassworld;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class User {
         return "User{" +
                 "adminId=" + adminId +
                 ", adminName='" + adminName + '\'' +
-                ", adminPassword='" + adminPassword + '\'' +
+                ", adminPassworld='" + adminPassworld + '\'' +
                 '}';
     }
 }
