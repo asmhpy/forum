@@ -1,0 +1,13 @@
+server:
+ port: 9080
+
+#DB Configuration:
+spring:
+ datasource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/forum?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+  username: root
+  password: 123456
+  #加载Mybatis映射文件
+mybatis:
+ mapper-locations: classpath:initialize/dao/*.xml
