@@ -20,6 +20,7 @@ public class UserController {
      */
     @PostMapping(value = "/regist")
     public Result regist(User user){
+//        System.out.println(user.toString());
         return userService.regist(user);
     }
     /**
